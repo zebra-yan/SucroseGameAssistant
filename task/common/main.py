@@ -10,7 +10,7 @@ IsWindowVisible = ctypes.windll.user32.IsWindowVisible
 
 
 def find_hwnd_from_pid(_pid):
-    def callback(_hwnd, _hwnds):
+    def callback(hwnd, _hwnds):
         # if win32gui.IsWindowVisible(hwnd) and win32gui.IsWindowEnabled(hwnd):
         _, found_pid = win32process.GetWindowThreadProcessId(hwnd)
 
